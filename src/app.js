@@ -5,7 +5,7 @@ let geoCode = require('./util/geocode');
 let forecast = require('./util/forecast');
 
 const app = express();
-
+let port = process.env.PORT || 3000
 // Define paths for Express configs
 let publicDirPath = path.join(__dirname,'../public')
 let viewPath = path.join(__dirname,'../templates/views') // เปลี่ยนให้ hbs มอง path ที่ไม่ใช่ default 
@@ -137,8 +137,8 @@ app.get('*',(req, res, next)=>{
 
 });
 
-app.listen(3000,()=> {
+app.listen(port,()=> {
 
-    console.log('Server is up on port 3000')
+    console.log('Server is up on port ' + port);
 
 });
