@@ -1,7 +1,3 @@
-console.log('Test');
-
-
-
 let weatherForm = document.querySelector('form');
 let search = document.querySelector('input');
 let messageOne = document.querySelector('#message-1');
