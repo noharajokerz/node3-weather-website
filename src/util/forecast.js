@@ -29,11 +29,12 @@ let forcase = (lat, long, callback) => {
             } else {
                 
                 let currentData = forcaseData.body.current;
-                //console.log('\n== Current Weather data ==');
-                //console.log(currentData);
+                console.log('\n== Current Weather data ==');
+                console.log(currentData);
                 // console.log('Temperature is ' + currentData.temperature + 'degress , but it feel like ' + currentData.feelslike + ' degreess.' + 'summary weather is ' + currentData.weather_descriptions[0]);
                 // callback( undefined, currentData);
-                let text = 'Temperature is ' + currentData.temperature + 'degress , but it feel like ' + currentData.feelslike + ' degreess.' + 'summary weather is ' + currentData.weather_descriptions[0];
+                let text = 'Temperature is ' + currentData.temperature + 'degress , but it feel like ' + currentData.feelslike + ' degreess.' + ' Summary weather is ' + currentData.weather_descriptions[0] + '. ';
+                text += 'The humidity is ' + currentData.humidity;
                 callback( undefined, text);
             }
 
